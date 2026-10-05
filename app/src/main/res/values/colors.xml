@@ -1,0 +1,29 @@
+<resources>
+    <!-- Primary – teal -->
+    <color name="emerald">#10B981</color>
+    <color name="emerald_dark">#059669</color>
+    <color name="teal400">#2DD4BF</color>
+    <color name="teal500">#14B8A6</color>
+    <color name="teal200">#99F6E4</color>
+    <color name="teal50">#F0FDFA</color>
+
+    <!-- Surfaces – deep blue-grey -->
+    <color name="slate900">#0C1222</color>
+    <color name="slate800">#131C31</color>
+    <color name="slate700">#1A2540</color>
+    <color name="slate600">#222F4E</color>
+    <color name="slate500">#2A3A5C</color>
+    <color name="slate400">#64748B</color>
+    <color name="slate300">#CBD5E1</color>
+    <color name="slate200">#E2E8F0</color>
+
+    <!-- Accents -->
+    <color name="indigo">#6366F1</color>
+    <color name="blue">#3B82F6</color>
+    <color name="red">#EF4444</color>
+    <color name="amber">#F59E0B</color>
+    <color name="yellow">#CA8A04</color>
+    <color name="purple">#9333EA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
