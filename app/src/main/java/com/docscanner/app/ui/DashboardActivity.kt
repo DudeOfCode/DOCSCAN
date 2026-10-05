@@ -15,6 +15,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
+import com.docscanner.app.R
 import com.docscanner.app.data.DocRepository
 import com.docscanner.app.data.ScanDocument
 import com.docscanner.app.databinding.ActivityDashboardBinding
