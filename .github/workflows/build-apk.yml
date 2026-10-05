@@ -1,26 +1,38 @@
 name: Build APK
 
+# Runs automatically on every push to master/main, on pull requests,
+# and can also be triggered manually from the Actions tab.
 on:
   push:
-    branches: [main]
+    branches: [ "master", "main" ]
   pull_request:
+    branches: [ "master", "main" ]
+  workflow_dispatch:
 
 jobs:
   build:
+    name: Build debug APK
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-java@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
         with:
-          distribution: temurin
-          java-version: 17
+          distribution: 'temurin'
+          java-version: '17'
 
-      - uses: gradle/actions/setup-gradle@v4
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
 
-      - run: ./gradlew assembleDebug
+      - name: Build debug APK
+        run: ./gradlew assembleDebug --stacktrace
 
-      - uses: actions/upload-artifact@v4
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
         with:
-          name: app-debug.apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          name: docscanner-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
